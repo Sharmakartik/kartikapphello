@@ -1,13 +1,6 @@
 pipeline {
   agent any
   stages {
-    stage('checkout') {
-      steps {
-      logstash {
-        git(url: 'https://github.com/Sharmakartik/kartikapphello.git', branch: 'master', changelog: true, credentialsId: 'Seema12345', poll: true)
-       }
-      }
-    }
     stage('Build') {
       steps {
       logstash {
